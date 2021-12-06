@@ -17,6 +17,7 @@ public class Cipher {
     }
 
     public String decoding(String cText, int key) {
+        cText = cText.toLowerCase();
 
     }
     }
