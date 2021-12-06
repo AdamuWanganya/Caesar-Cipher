@@ -15,5 +15,9 @@ public class Cipher {
         }
         return cText.toString();
     }
+
+    public String decoding(String cText, int key) {
+
+    }
     }
 }
