@@ -9,5 +9,8 @@ public class App {
         Cipher testCipher = new Cipher();
         System.out.println("Enter plain Text");
         String plain = scan.nextLine();
+
+        System.out.println("Enter key >>");
+        int key = scan.nextInt();
     }
     }
