@@ -2,10 +2,8 @@
 Caesar Cipher is a java command line Application type of substitution in which each letter is shifted a certain number of places known as the key down the alphabet.
 
 ### Technologies Used
-HTML & CSS (Bootstrap)
-JavaScript (jQuery 3.6.0.js)
-Requirements
-JSFiddle or JavaScript Console
+Java 
+JUnit test
 
 ### Setup Instructions and Installation
 Clone this repository to a location in your file system. `git clone https://github.com/AdamuWanganya/Caesar-Cipher
