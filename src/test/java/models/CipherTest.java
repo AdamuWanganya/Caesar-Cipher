@@ -43,5 +43,6 @@ class CipherTest {
                 char plainChar = alphabet.charAt(newIndex);
                 pText = pText + plainChar;
             }
+            assertEquals(pText,cText);
         }
     }
