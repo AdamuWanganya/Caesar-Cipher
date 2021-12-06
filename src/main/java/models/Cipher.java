@@ -22,8 +22,11 @@ public class Cipher {
         for (int i = 0; i<cText.length(); i++) {
             int charIndex = alphabet.indexOf(cText.charAt(i));
             int newIndex = (charIndex - key) % 26;
+            if(newIndex < 0){
+                newIndex = alphabet.length() + newIndex;
+            }
 
-        }
+            }
 
         }
     }
