@@ -13,6 +13,7 @@ public class Cipher {
             char cipherChar = alphabet.charAt(newIndex);
             cText.append(cipherChar);
         }
+        return cText.toString();
     }
     }
 }
