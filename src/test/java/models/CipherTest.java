@@ -28,5 +28,20 @@ class CipherTest {
 
     @Test
     void decoding() {
+
+            String pText = "";
+            String cText ="";
+            String alphabet = "abcde";
+            int key = 3;
+            for (int i = 0; i<cText.length(); i++){
+
+                int charIndex = alphabet.indexOf(cText.charAt(i));
+                int newIndex = (charIndex - key) % 26;
+                if(newIndex < 0){
+                    newIndex = alphabet.length() + newIndex;
+                }
+                char plainChar = alphabet.charAt(newIndex);
+                pText = pText + plainChar;
+            }
+        }
     }
-}
