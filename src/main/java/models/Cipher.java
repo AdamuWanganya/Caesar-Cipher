@@ -20,6 +20,9 @@ public class Cipher {
         cText = cText.toLowerCase();
         String pText = "";
         for (int i = 0; i<cText.length(); i++) {
+            int charIndex = alphabet.indexOf(cText.charAt(i));
+            int newIndex = (charIndex - key) % 26;
+
         }
 
         }
