@@ -18,7 +18,10 @@ public class Cipher {
 
     public String decoding(String cText, int key) {
         cText = cText.toLowerCase();
+        String pText = "";
+        for (int i = 0; i<cText.length(); i++) {
+        }
 
-    }
+        }
     }
 }
