@@ -12,5 +12,13 @@ public class App {
 
         System.out.println("Enter key >>");
         int key = scan.nextInt();
+
+        String cipherText = testCipher.encoding(plain, key);
+
+        System.out.println("Cipher text : " + cipherText);
+
+
+        System.out.println("The decoded message is : "+ testCipher.decoding(cipherText, key));
+
     }
     }
