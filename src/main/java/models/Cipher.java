@@ -33,5 +33,11 @@ public class Cipher {
     }
 
 
+    public String toLowerCase() {
+        String plainText = "WELCOME TO CODING";
+         plainText = plainText.toLowerCase();
+
+         return plainText;
+    }
 }
 

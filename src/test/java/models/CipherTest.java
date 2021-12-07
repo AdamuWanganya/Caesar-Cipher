@@ -10,42 +10,48 @@ class CipherTest {
     void encoding() {
 
         Cipher testCipher = new Cipher();
-        String pText = "welcome to coding";
+        String plainText = "welcome to coding";
 
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
         int key = 3;
-        pText = pText.toLowerCase();
-        StringBuilder cText = new StringBuilder();
-        for (int i = 0; i<pText.length(); i++){
-            int charIndex = alphabet.indexOf(pText.charAt(i));
+        plainText = plainText.toLowerCase();
+
+        String cText ="";
+        for (int i = 0; i<plainText.length(); i++){
+            int charIndex = alphabet.indexOf(plainText.charAt(i));
             int newIndex = (charIndex + key) % 26;
             char cipherChar = alphabet.charAt(newIndex);
-            cText.append(cipherChar);
+            cText += String.valueOf(cipherChar);
         }
 
-        assertEquals(cText,pText);
+        assertEquals(cText,testCipher.encoding(plainText, 3));
     }
+
 
     @Test
     void decoding() {
 
             Cipher testCipher = new Cipher();
-            String pText = "";
-            String cText ="";
+            String plainText = "";
+            String codedText ="";
             String alphabet = "abcde";
             int key = 3;
-            for (int i = 0; i<cText.length(); i++){
+            for (int i = 0; i<plainText.length(); i++){
 
-                int charIndex = alphabet.indexOf(cText.charAt(i));
+                int charIndex = alphabet.indexOf(plainText.charAt(i));
                 int newIndex = (charIndex - key) % 26;
                 if(newIndex < 0){
                     newIndex = alphabet.length() + newIndex;
                 }
                 char plainChar = alphabet.charAt(newIndex);
-                pText = pText + plainChar;
+                plainText = plainText + plainChar;
             }
-            assertEquals(pText,cText);
-        }
-
-
+  assertEquals(plainText,testCipher.encoding(codedText, 3));
+          }
+    @Test
+    void allLowerCase_returnsAllLowerCase_String() {
+        Cipher testCipher = new Cipher();
+        String plainText = "welcome to coding";
+        assertEquals(plainText,testCipher.toLowerCase());
+    }
 }
