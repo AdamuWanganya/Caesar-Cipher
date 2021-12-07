@@ -29,6 +29,7 @@ class CipherTest {
     @Test
     void decoding() {
 
+            Cipher testCipher = new Cipher();
             String pText = "";
             String cText ="";
             String alphabet = "abcde";
@@ -45,4 +46,6 @@ class CipherTest {
             }
             assertEquals(pText,cText);
         }
-    }
+
+
+}
